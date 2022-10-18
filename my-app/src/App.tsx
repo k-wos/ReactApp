@@ -5,15 +5,20 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import styled from "styled-components";
 import {Home} from "./components/Common/Routes/Home/Home"
 import { Posts } from "./components/Common/Routes/Posts/posts";
 import { Profile } from "./components/Common/Routes/Profile/profile";
 import {Photos} from "./components/Common/Routes/Photos/photos";
 import { Comments } from "./components/Common/Routes/Comments/Comments";
+import { Layout } from "./components/Common/layout";
 
 export const App: FC = () => {
   return (
+    
+    
     <Router>
+      
       <div>
         <Link to="posts"> Posts </Link>
         <Link to="profile"> Profile </Link>
@@ -21,6 +26,7 @@ export const App: FC = () => {
         <Link to="comments">Comments</Link>
         <Link to="/"> Home </Link>
       </div>
+      <Layout>
       <Routes>
         <Route path="posts" element={<Posts />} />
         <Route path="profile" element={<Profile />} />
@@ -29,6 +35,7 @@ export const App: FC = () => {
         <Route index element={<Home />} />
 
       </Routes>
+      </Layout>
     </Router>
   );
 }
