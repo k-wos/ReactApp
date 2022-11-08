@@ -7,10 +7,17 @@ const Wrapper = styled.div`
 `;
 
 
+const Menu = styled.div`
+    text-align:right;
+`;
+
+
 const Content = styled.div`
     width: 1024px;
     margin: 0 auto;
     color:red;
+    background-color:yellow;
+    text-align:center;
 `;
 
 
@@ -21,6 +28,7 @@ interface IProps{
 export const Layout: FC<IProps> = props =>{
     return(
         <Wrapper>
+            <Menu/>
             <Content>
                 {props.children}
             </Content>

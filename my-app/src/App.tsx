@@ -12,20 +12,15 @@ import { Profile } from "./components/Common/Routes/Profile/profile";
 import {Photos} from "./components/Common/Routes/Photos/photos";
 import { Comments } from "./components/Common/Routes/Comments/Comments";
 import { Layout } from "./components/Common/layout";
-
+import NavBar from "./components/NavBar/NavBar"
 export const App: FC = () => {
   return (
     
     
     <Router>
       
-      <div>
-        <Link to="posts"> Posts </Link>
-        <Link to="profile"> Profile </Link>
-        <Link to="photos">Photos</Link>
-        <Link to="comments">Comments</Link>
-        <Link to="/"> Home </Link>
-      </div>
+      
+      <NavBar />
       <Layout>
       <Routes>
         <Route path="posts" element={<Posts />} />
